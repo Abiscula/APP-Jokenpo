@@ -1,13 +1,15 @@
 import React from "react";
+import { Fragment } from "react/cjs/react.production.min";
 import styled from "styled-components";
-
+import { useRules } from "../providers/p-rules";
+import img from '../components/assets/images/image-rules.svg'
+import {ReactComponent as Close} from '../components/assets/images/icon-close.svg'
 
 const RulesStyle = styled.div`
     display: flex;
     width: 90%;
     justify-content: flex-end;
     
-
     button {
         display: flex;
         background: transparent;
@@ -24,12 +26,74 @@ const RulesStyle = styled.div`
     }
 `
 
+const RulesIMG = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 35%;
+        background-color: #fefefe;
+        padding: 3%;
+        border-radius: 15px;
+    }
+
+    span {
+        display: flex;
+        width: 100%;
+        margin-top: -3%;
+        margin-bottom: 10%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h2 {
+        display: flex;
+        color: hsl(214, 47%, 23%);
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-top: -1%;
+        
+    }
+
+    img {
+        display: flex;
+    }
+
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+`
+
 
 const Rules = () => {
+
+    const {rules, setRules} = useRules()
+
     return(
-        <RulesStyle>
-            <button>RULES</button>
-        </RulesStyle>
+        <Fragment>
+            <RulesStyle>
+                <button onClick={() => setRules(true)}>RULES</button>
+            </RulesStyle>
+            {rules&&
+            <RulesIMG>
+                <div>
+                    <span>
+                        <h2>RULES</h2>
+                        <button onClick={() => setRules(false)}><Close/></button>
+                    </span>
+                    <img src={img} />
+                </div>
+            </RulesIMG>
+            }
+        </Fragment>
     )
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import img from './styles/images/icon-scissors.svg'
+import img from './assets/images/icon-scissors.svg'
+import { usePlay } from "../providers/p-plays";
 
 const ScissorStyle = styled.div`
     display: flex;
@@ -30,9 +31,12 @@ const ScissorStyle = styled.div`
 
 
 const Scissor = () => {
+
+    const { setPlay } = usePlay()
+
     return(
         <ScissorStyle>
-            <button><img src={img} /></button>
+            <button onClick={() => setPlay('scissor')}><img src={img} /></button>
         </ScissorStyle>
     )
 }

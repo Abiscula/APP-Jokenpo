@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import img from './styles/images/icon-paper.svg'
+import img from './assets/images/icon-paper.svg'
+import { usePlay } from "../providers/p-plays";
 
 const PaperStyle = styled.div`
     display: flex;
@@ -30,9 +31,12 @@ const PaperStyle = styled.div`
 
 
 const Paper = () => {
+
+    const { setPlay } = usePlay()
+
     return(
         <PaperStyle>
-            <button><img src={img} /></button>
+            <button onClick={() => setPlay('paper')}><img src={img} /></button>
         </PaperStyle>
     )
 }

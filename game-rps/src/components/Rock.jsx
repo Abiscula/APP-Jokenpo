@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import img from './styles/images/icon-rock.svg'
+import img from './assets/images/icon-rock.svg'
+import { usePlay } from "../providers/p-plays";
 
 const RockStyle = styled.div`
     display: flex;
@@ -30,9 +31,12 @@ const RockStyle = styled.div`
 
 
 const Rock = () => {
+
+    const { setPlay } = usePlay()
+
     return(
         <RockStyle>
-            <button><img src={img} /></button>
+            <button onClick={() => setPlay('rock')}><img src={img} /></button>
         </RockStyle>
     )
 }

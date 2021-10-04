@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Paper from "./Paper";
 import Scissor from "./Scissor";
-import triangle from './styles/images/bg-triangle.svg'
+import triangle from './assets/images/bg-triangle.svg'
 import Rock from './Rock'
+import { usePlay } from "../providers/p-plays";
 
 
 const ButtonsArea = styled.div`
@@ -35,7 +36,7 @@ const ButtonsArea = styled.div`
 
 const Buttons = () => {
     return(
-        <ButtonsArea>
+        <ButtonsArea >
             <span>
                 <Paper />
                 <Scissor />
