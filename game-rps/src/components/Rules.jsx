@@ -1,7 +1,5 @@
-import React from "react";
-import { Fragment } from "react/cjs/react.production.min";
+import React, { useState, Fragment} from "react";
 import styled from "styled-components";
-import { useRules } from "../providers/p-rules";
 import img from '../components/assets/images/image-rules.svg'
 import {ReactComponent as Close} from '../components/assets/images/icon-close.svg'
 
@@ -75,7 +73,7 @@ const RulesIMG = styled.div`
 
 const Rules = () => {
 
-    const {rules, setRules} = useRules()
+    const [rules, setRules] = useState()
 
     return(
         <Fragment>

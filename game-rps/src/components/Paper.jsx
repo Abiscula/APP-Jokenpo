@@ -6,7 +6,7 @@ import { PaperStyle } from "./assets/styled-buttons";
 
 const Paper = () => {
 
-    const { setPlay } = usePlay()
+    const { setPlay, button } = usePlay()
     const { setPage } = usePage()
 
     function handlePlay() {
@@ -15,7 +15,7 @@ const Paper = () => {
     }
 
     return(
-        <PaperStyle>
+        <PaperStyle button={button}>
             <button onClick={handlePlay}><img src={img} /></button>
         </PaperStyle>
     )

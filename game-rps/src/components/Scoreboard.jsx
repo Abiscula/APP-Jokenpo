@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PlayScore from "../utils/playScore";
 
 
 const ScoreStyle = styled.div`
@@ -66,7 +67,7 @@ const Scoreboard = () => {
             </Title>
             <Score>
                 <h2>SCORE</h2>
-                <span>12</span>
+                <span>{PlayScore()}</span>
             </Score>
         </ScoreStyle>
     )

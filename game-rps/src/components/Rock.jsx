@@ -6,7 +6,7 @@ import { RockStyle } from "./assets/styled-buttons";
 
 const Rock = () => {
 
-    const { setPlay } = usePlay()
+    const { setPlay, button } = usePlay()
     const { setPage } = usePage()
 
     function handlePlay() {
@@ -15,7 +15,7 @@ const Rock = () => {
     }
 
     return(
-        <RockStyle>
+        <RockStyle button={button}>
             <button onClick={handlePlay}><img src={img} /></button>
         </RockStyle>
     )

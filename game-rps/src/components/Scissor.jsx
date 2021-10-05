@@ -6,7 +6,7 @@ import { ScissorStyle } from "./assets/styled-buttons";
 
 const Scissor = () => {
 
-    const { setPlay } = usePlay()
+    const { setPlay, button } = usePlay()
     const { setPage } = usePage()
 
     function handlePlay() {
@@ -15,7 +15,7 @@ const Scissor = () => {
     }
 
     return(
-        <ScissorStyle>
+        <ScissorStyle button={button}>
             <button onClick={handlePlay}><img src={img} /></button>
         </ScissorStyle>
     )

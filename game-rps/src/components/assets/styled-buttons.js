@@ -28,10 +28,10 @@ export const ButtonsArea = styled.div`
 
 export const PaperStyle = styled.div`
     display: flex;
-    width: 160px;
-    height: 160px;
+    width: ${({button}) => (button === 1 ? '160px' : '210px')};
+    height: ${({button}) => (button === 1 ? '160px' : '210px')};
     background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));;
-    border-radius: 80px;
+    border-radius: 150px;
     align-items: center;
     justify-content: center;
     box-shadow: inset 0 -7px 0 rgba(0, 0, 0, 0.30), 0 5px 0 rgba(0, 0, 0, 0.15);
@@ -39,8 +39,8 @@ export const PaperStyle = styled.div`
     Button {
         border: none;
         cursor: pointer;
-        width: 125px;
-        height: 125px;
+        width: ${({button}) => (button === 1 ? '125px' : '160px')};
+        height: ${({button}) => (button === 1 ? '125px' : '160px')};
         display: flex;
         background: white;
         border-radius: 80px;
@@ -48,12 +48,16 @@ export const PaperStyle = styled.div`
         justify-content: center;
         box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.15)
     }
+
+    img {
+        width: 43%;
+    }
 `
 
 export const RockStyle = styled(PaperStyle)`
-background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
 `
 
 export const ScissorStyle = styled(PaperStyle)`
-background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 `
