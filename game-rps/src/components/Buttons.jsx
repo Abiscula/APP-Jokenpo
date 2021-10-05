@@ -1,38 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import Paper from "./Paper";
 import Scissor from "./Scissor";
-import triangle from './assets/images/bg-triangle.svg'
-import Rock from './Rock'
-import { usePlay } from "../providers/p-plays";
-
-
-const ButtonsArea = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: 1rem auto;
-    width: 55%;
-
-    .triangle {
-        z-index: -1;
-        width: 65%;
-        margin-left: 18%;
-        margin-top: -15%;
-    }
-
-    span {
-        margin-top: 5%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    span:nth-child(3) {
-        display: flex;
-        justify-content: center;
-        margin-top: -30%;
-    }
-`
-
+import Rock from './Rock';
+import triangle from './assets/images/bg-triangle.svg';
+import { ButtonsArea } from "./assets/styled-buttons";
 
 const Buttons = () => {
     return(

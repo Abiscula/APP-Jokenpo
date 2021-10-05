@@ -5,6 +5,7 @@ const RulesContext = createContext()
 export const RulesProvider = ({children}) => {
 
     const [rules, setRules] = useState(false)
+    
 
     return(
         <RulesContext.Provider value={{rules, setRules}}>

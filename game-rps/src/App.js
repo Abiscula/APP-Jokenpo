@@ -1,14 +1,20 @@
 import React, { Fragment } from 'react'
 import { GlobalStyle } from './components/assets/general-styles';
 import Main from './pages/Main';
-
-//Math.floor(Math.random() * 3);
+import Dispute from './pages/Dispute';
+import { usePage } from './providers/p-pages';
 
 function App() {
+
+  const { page } = usePage()
+
   return (
     <Fragment>
       <GlobalStyle />
-      <Main />
+      {page 
+        ? <Dispute />
+        : <Main /> 
+      }
     </Fragment>
   );
 }

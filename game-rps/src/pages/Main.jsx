@@ -4,8 +4,6 @@ import Scoreboard from '../components/Scoreboard'
 import Buttons from  '../components/Buttons'
 import Rules from  '../components/Rules'
 
-
-
 const Main = () => {
     return(
         <Fragment>
