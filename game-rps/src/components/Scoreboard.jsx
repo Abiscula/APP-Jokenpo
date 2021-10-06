@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PlayScore from "../utils/playScore";
-
+import { usePlay } from "../providers/p-plays";
 
 const ScoreStyle = styled.div`
     width: 100%;
@@ -58,6 +57,9 @@ const Score = styled.div`
 
 
 const Scoreboard = () => {
+
+    const {win} = usePlay()
+
     return(
         <ScoreStyle>
             <Title>
@@ -67,7 +69,7 @@ const Scoreboard = () => {
             </Title>
             <Score>
                 <h2>SCORE</h2>
-                <span>{PlayScore()}</span>
+                <span>{win}</span>
             </Score>
         </ScoreStyle>
     )

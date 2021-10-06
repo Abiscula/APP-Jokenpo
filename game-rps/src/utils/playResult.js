@@ -1,6 +1,5 @@
-import React from "react";
-
 const playResult = (player, enemy) => {
+    
     if(player === enemy) {
         return 'Draw'
     } else {

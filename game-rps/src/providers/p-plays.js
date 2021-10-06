@@ -7,9 +7,10 @@ export const PlayProvider = ({children}) => {
     const [enemy, setEnemy] = useState('') //estado que recebe jogada do computador
     const [score, setScore] = useState('') //estado que recebe score
     const [button, setButton] = useState(1) //altera style do botao
-
+    const [win, setWin] = useState(0)
+    
     return(
-        <PlayContext.Provider value={{play, setPlay, enemy, setEnemy, button, setButton, score, setScore}}>
+        <PlayContext.Provider value={{play, setPlay, enemy, setEnemy, button, setButton, score, setScore, win, setWin}}>
             {children}
         </PlayContext.Provider>
     )
