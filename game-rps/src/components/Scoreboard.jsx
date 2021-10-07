@@ -58,7 +58,7 @@ const Score = styled.div`
 
 const Scoreboard = () => {
 
-    const {win} = usePlay()
+    const {points} = usePlay()
 
     return(
         <ScoreStyle>
@@ -69,7 +69,7 @@ const Scoreboard = () => {
             </Title>
             <Score>
                 <h2>SCORE</h2>
-                <span>{win}</span>
+                <span>{points}</span>
             </Score>
         </ScoreStyle>
     )

@@ -10,18 +10,17 @@ import { usePage } from "../providers/p-pages";
 
 
 const Dispute = () => {
-    const { setButton } = usePlay()
     const { setPage } = usePage()
-    const { play, enemy, score, setScore, setWin, win} = usePlay()
+    const { play, enemy, score, setScore, setPoints, points, setButton} = usePlay()
     const result = playResult(play, enemy) //resultado da comparação (retorna string)
     
     useEffect(() => { //Chama uma nova jogada do computador toda vez que o usuario joga
         setButton(2) // estado para alterar tamanho do botao
         setScore(result) //adiciona resultado no estado
         if(result === 'YOU WIN') {
-            setWin(win+1)
+            setPoints(points+1)
         } else if(result === 'YOU LOSE') {
-            setWin(win-1)
+            setPoints(points-1)
         }
     }, [setButton, setScore])
 
