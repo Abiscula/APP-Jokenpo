@@ -6,11 +6,12 @@ import { ScissorStyle } from "./assets/styled-buttons";
 
 const Scissor = () => {
 
-    const { setPlay, button } = usePlay()
+    const { setPlay, button, setEnemy } = usePlay()
     const { setPage } = usePage()
 
     function handlePlay() {
-        setPlay(1) //scissor
+        setPlay(1) //scissor]
+        setEnemy(Math.floor(Math.random() * 3))
         setPage(true)
     }
 

@@ -6,11 +6,12 @@ import { RockStyle } from "./assets/styled-buttons";
 
 const Rock = () => {
 
-    const { setPlay, button } = usePlay()
+    const { setPlay, button, setEnemy } = usePlay()
     const { setPage } = usePage()
 
     function handlePlay() {
         setPlay(2) //rock
+        setEnemy(Math.floor(Math.random() * 3))
         setPage(true)
     }
 

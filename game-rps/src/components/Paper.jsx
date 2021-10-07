@@ -6,11 +6,12 @@ import { PaperStyle } from "./assets/styled-buttons";
 
 const Paper = () => {
 
-    const { setPlay, button } = usePlay()
+    const { setPlay, button, setEnemy } = usePlay()
     const { setPage } = usePage()
 
     function handlePlay() {
-        setPlay(0) //paper
+        setPlay(0) //papel
+        setEnemy(Math.floor(Math.random() * 3))
         setPage(true)
     }
 
