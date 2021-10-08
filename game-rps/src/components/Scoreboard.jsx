@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { usePlay } from "../providers/p-plays";
+import titleIMG from '../components/assets/images/logo-bonus.svg'
 
 const ScoreStyle = styled.div`
     width: 100%;
@@ -10,23 +11,11 @@ const ScoreStyle = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-`
 
-const Title = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    h1 {
-        display: flex;
-        font-weight: 700;
+    img {
         margin-left: 0.8rem;
-        margin-top: 0.8rem;
-        margin-bottom: -1.2rem;
     }
 
-    h1:nth-child(3) {
-        margin-bottom: 0.8rem;
-    }
 `
 
 const Score = styled.div`
@@ -39,7 +28,7 @@ const Score = styled.div`
     margin-right: 0.8rem;
     align-items: center;
     justify-content: center;
-    
+
 
     h2 {
         color: hsl(229, 64%, 46%);
@@ -62,14 +51,12 @@ const Scoreboard = () => {
 
     return(
         <ScoreStyle>
-            <Title>
-                <h1>ROCK</h1>
-                <h1>PAPER</h1>
-                <h1>SCISSORS</h1>
-            </Title>
+
+                <img src={titleIMG} />
             <Score>
                 <h2>SCORE</h2>
                 <span>{points}</span>
+                
             </Score>
         </ScoreStyle>
     )

@@ -2,18 +2,24 @@ import React from "react";
 import Paper from "./Paper";
 import Scissor from "./Scissor";
 import Rock from './Rock';
-import triangle from './assets/images/bg-triangle.svg';
+import pentagon from './assets/images/bg-pentagon.svg';
 import { ButtonsArea } from "./assets/styled-buttons";
+import Spock from "./Spock";
+import Lizard from "./Lizard";
 
 const Buttons = () => {
     return(
         <ButtonsArea >
             <span>
-                <Paper />
                 <Scissor />
             </span>
-            <img className="triangle" src={triangle} />
             <span>
+                <Spock />
+                <Paper /> 
+            </span>
+            <img className="pentagon" src={pentagon} />
+            <span>
+                <Lizard />
                 <Rock />
             </span>
         </ButtonsArea>

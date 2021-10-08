@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState } from "react";
 const PlayContext = createContext()
 
 export const PlayProvider = ({children}) => {
-    const [play, setPlay] = useState('') //0- paper / 1- scissor / 2- rock
+    const [play, setPlay] = useState('') // 0-scissor / 1-paper / 2-rock / 3-lizard / 4-spock
     const [enemy, setEnemy] = useState('') //estado que recebe jogada do computador
     const [score, setScore] = useState('') //estado que recebe o resultado (string)
     const [button, setButton] = useState(1) //altera style do botao

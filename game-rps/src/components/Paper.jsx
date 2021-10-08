@@ -10,7 +10,7 @@ const Paper = () => {
     const { setPage } = usePage()
 
     function handlePlay() {
-        setPlay(0) //papel
+        setPlay(1) //papel
         setEnemy(Math.floor(Math.random() * 3))
         setPage(true)
     }

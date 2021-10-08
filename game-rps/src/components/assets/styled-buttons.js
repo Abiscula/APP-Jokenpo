@@ -4,25 +4,31 @@ export const ButtonsArea = styled.div`
     display: flex;
     flex-direction: column;
     margin: 1rem auto;
-    width: 55%;
+    width: 80%;
 
-    .triangle {
+    .pentagon {
+        display: flex;
+        align-self: center;
         z-index: -1;
-        width: 65%;
-        margin-left: 18%;
-        margin-top: -15%;
+        width: 80%;
+        margin-top: -43%;
     }
 
-    span {
+    span:first-child {
         margin-top: 5%;
+        display: flex;
+        justify-content: center;
+    }
+
+    span:nth-child(2) {
         display: flex;
         justify-content: space-between;
     }
 
-    span:nth-child(3) {
+    span:nth-child(4) {
         display: flex;
-        justify-content: center;
-        margin-top: -30%;
+        justify-content: space-around;
+        margin-top: -17%;
     }
 `
 
@@ -60,4 +66,12 @@ export const RockStyle = styled(PaperStyle)`
 
 export const ScissorStyle = styled(PaperStyle)`
     background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+`
+
+export const LizardStyle = styled(PaperStyle)`
+    background: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+`
+
+export const SpockStyle = styled(PaperStyle)`
+    background: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
 `

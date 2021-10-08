@@ -1,6 +1,6 @@
 import React, { useState, Fragment} from "react";
 import styled from "styled-components";
-import img from '../components/assets/images/image-rules.svg'
+import img from '../components/assets/images/image-rules-bonus.svg'
 import {ReactComponent as Close} from '../components/assets/images/icon-close.svg'
 
 const RulesStyle = styled.div`
