@@ -1,7 +1,7 @@
-# App - Pedra Papel e Tesoura.
+# App - # App - Pedra Papel, Tesoura, Lagarto e Spock.
 
 <p>Desenvolvido em <strong>ReactJS</strong> (em construção)</p>
 
-![image](https://user-images.githubusercontent.com/85578784/136302840-00bb567e-11ff-4b1b-8086-aebc5814a0bb.png)
+![image](https://user-images.githubusercontent.com/85578784/136480334-6313c60b-3933-4cb8-b2dc-79a2c9404c57.png)
 
-![image](https://user-images.githubusercontent.com/85578784/136302851-be2fe4c5-c3e7-4ae3-a0ff-032fd16997dc.png)
+
