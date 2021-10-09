@@ -46,8 +46,9 @@ const Score = styled.div`
 
 
 const Scoreboard = () => {
+    
+    const localPoints = window.localStorage.getItem('pontos')
 
-    const {points} = usePlay()
 
     return(
         <ScoreStyle>
@@ -55,8 +56,7 @@ const Scoreboard = () => {
                 <img src={titleIMG} />
             <Score>
                 <h2>SCORE</h2>
-                <span>{points}</span>
-                
+                <span>{localPoints === null ? '0' : localPoints}</span>
             </Score>
         </ScoreStyle>
     )

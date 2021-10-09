@@ -19,8 +19,10 @@ const Dispute = () => {
         setScore(result) //adiciona resultado no estado
         if(result === 'YOU WIN') {
             setPoints(points+1)
+            window.localStorage.setItem('pontos', points+1)
         } else if(result === 'YOU LOSE') {
             setPoints(points-1)
+            window.localStorage.setItem('pontos', points-1)
         }
     }, [setButton, setScore])
 
