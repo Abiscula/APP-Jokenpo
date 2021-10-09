@@ -1,4 +1,4 @@
-import React, { memo } from "react"
+import React from "react"
 import Paper from "../components/Paper"
 import Scissor from "../components/Scissor"
 import Rock from "../components/Rock"

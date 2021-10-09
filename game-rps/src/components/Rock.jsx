@@ -1,18 +1,18 @@
 import React from "react";
 import img from './assets/images/icon-rock.svg';
 import { usePlay } from "../providers/p-plays";
-import { usePage } from "../providers/p-pages";
-import { RockStyle } from "./assets/styled-buttons";
+import { useChangePage } from "../providers/page";
+import { RockStyle } from "./assets/styled-main";
 
 const Rock = () => {
 
-    const { setPlay, button, setEnemy } = usePlay()
-    const { setPage } = usePage()
+    const { setPlay, setEnemy } = usePlay()
+    const { changePage, button } = useChangePage()
 
     function handlePlay() {
         setPlay(2) //rock
         setEnemy(Math.floor(Math.random() * 3))
-        setPage(true)
+        changePage('/dispute')
     }
 
     return(

@@ -6,12 +6,12 @@ import PlayFilter from "../utils/playFilter";
 import playResult from "../utils/playResult";
 import { usePlay } from "../providers/p-plays";
 import { Result } from '../components/assets/styled-dispute'
-import { usePage } from "../providers/p-pages";
+import { useChangePage } from "../providers/page";
 
 
 const Dispute = () => {
-    const { setPage } = usePage()
-    const { play, enemy, score, setScore, setPoints, points, setButton} = usePlay()
+    const { changePage, setButton } = useChangePage()
+    const { play, enemy, score, setScore, setPoints, points} = usePlay()
     const result = playResult(play, enemy) //resultado da comparação (retorna string)
     
     useEffect(() => { //Chama uma nova jogada do computador toda vez que o usuario joga
@@ -21,13 +21,15 @@ const Dispute = () => {
             setPoints(points+1)
             window.localStorage.setItem('pontos', points+1)
         } else if(result === 'YOU LOSE') {
-            setPoints(points-1)
-            window.localStorage.setItem('pontos', points-1)
+            if(points != 0) {
+                setPoints(points-1)
+                window.localStorage.setItem('pontos', points-1)
+            } 
         }
-    }, [setButton, setScore])
+    }, [setScore, setPoints])
 
     function handleAgain() {
-        setPage(false)
+        changePage('/')
         setButton(1)
     }
 

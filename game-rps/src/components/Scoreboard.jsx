@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { usePlay } from "../providers/p-plays";
 import titleIMG from '../components/assets/images/logo-bonus.svg'
 
 const ScoreStyle = styled.div`
@@ -49,14 +48,13 @@ const Scoreboard = () => {
     
     const localPoints = window.localStorage.getItem('pontos')
 
-
     return(
         <ScoreStyle>
 
                 <img src={titleIMG} />
             <Score>
                 <h2>SCORE</h2>
-                <span>{localPoints === null ? '0' : localPoints}</span>
+                <span>{localPoints || 0}</span>
             </Score>
         </ScoreStyle>
     )

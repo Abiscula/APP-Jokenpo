@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { PageProvider } from './providers/p-pages';
+import { PageProvider } from './providers/page';
 import { PlayProvider } from './providers/p-plays';
 
 ReactDOM.render(

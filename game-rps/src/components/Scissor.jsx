@@ -1,18 +1,18 @@
 import React from "react";
 import img from './assets/images/icon-scissors.svg';
 import { usePlay } from "../providers/p-plays";
-import { usePage } from "../providers/p-pages";
-import { ScissorStyle } from "./assets/styled-buttons";
+import { useChangePage } from "../providers/page";
+import { ScissorStyle } from "./assets/styled-main";
 
 const Scissor = () => {
 
-    const { setPlay, button, setEnemy } = usePlay()
-    const { setPage } = usePage()
+    const { setPlay, setEnemy } = usePlay()
+    const { changePage, button } = useChangePage()
 
     function handlePlay() {
         setPlay(0) //scissor
         setEnemy(Math.floor(Math.random() * 3))
-        setPage(true)
+        changePage('/dispute')
     }
 
     return(
