@@ -21,10 +21,8 @@ const Dispute = () => {
             setPoints(points+1)
             window.localStorage.setItem('pontos', points+1)
         } else if(result === 'YOU LOSE') {
-            if(points != 0) {
-                setPoints(points-1)
-                window.localStorage.setItem('pontos', points-1)
-            } 
+            setPoints(points-1)
+            window.localStorage.setItem('pontos', points-1)
         }
     }, [setScore, setPoints])
 

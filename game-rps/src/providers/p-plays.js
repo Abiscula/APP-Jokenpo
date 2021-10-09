@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { useChangePage } from "./page";
 
 const PlayContext = createContext()
 
@@ -16,3 +17,20 @@ export const PlayProvider = ({children}) => {
 }
 
 export const usePlay = () => useContext(PlayContext)
+
+export const useHandlePlay = () => {
+    const {setEnemy, setPlay} = useContext(PlayContext)
+    const { changePage } = useChangePage()
+
+    function handlePlay(n) {
+        setPlay(n) //papel
+        setEnemy(Math.floor(Math.random() * 3))
+        changePage('/dispute')
+    }
+
+    return {
+        setEnemy,
+        setPlay,
+        handlePlay
+    }
+}
