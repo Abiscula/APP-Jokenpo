@@ -14,7 +14,7 @@ const Dispute = () => {
     const { play, enemy, score, setScore, setPoints, points} = usePlay()
     const result = playResult(play, enemy) //resultado da comparação (retorna string)
     
-    useEffect(() => { //Chama uma nova jogada do computador toda vez que o usuario joga
+    useEffect(() => { //Chama uma nova jogada do computador toda vez que os pontos/resultado mudam
         setButton(2) // estado para alterar tamanho do botao
         setScore(result) //adiciona resultado no estado
         if(result === 'YOU WIN') {

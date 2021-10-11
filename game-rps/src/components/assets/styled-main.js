@@ -55,6 +55,10 @@ export const PaperStyle = styled.div`
         box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.15)
     }
 
+    button:hover {
+        transform: rotate(45deg);
+    }
+
     img {
         width: 43%;
     }

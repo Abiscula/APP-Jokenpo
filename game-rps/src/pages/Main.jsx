@@ -11,11 +11,12 @@ import { Container } from "../components/assets/styled-common";
 import { ButtonsArea } from "../components/assets/styled-main";
 
 const Main = () => {
+
     return(
         <Fragment>
             <Container>
                 <Scoreboard/>
-                <ButtonsArea >
+                <ButtonsArea>
                     <span>
                         <Scissor />
                     </span>
