@@ -4,13 +4,14 @@ export const ButtonsArea = styled.div`
     display: flex;
     flex-direction: column;
     margin: 1rem auto;
-    width: 80%;
+    width: 75%;
+    
 
     .pentagon {
         display: flex;
         align-self: center;
         z-index: -1;
-        width: 80%;
+        width: 32vw;
         margin-top: -43%;
     }
 
